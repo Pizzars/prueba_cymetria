@@ -2,7 +2,6 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "@next/next/no-img-element": "off", // Desactiva la regla que prohíbe el uso del elemento <img> en Next.js
-    "react/react-in-jsx-scope": "off", // Desactiva la regla que requiere importar React en cada archivo JSX
     "@typescript-eslint/no-explicit-any": "warn", // Advierte sobre el uso de "any" explícito en TypeScript
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".ts", ".tsx", ".jsx"] }], // Permite archivos con extensiones .js, .ts, .tsx y .jsx para JSX en React
     "quotes": "error", // Desactiva la regla que impone un estilo de comillas específico <-
