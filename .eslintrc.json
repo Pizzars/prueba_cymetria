@@ -1,3 +1,30 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@next/next/no-img-element": "off", // Desactiva la regla que prohíbe el uso del elemento <img> en Next.js
+    "react/react-in-jsx-scope": "off", // Desactiva la regla que requiere importar React en cada archivo JSX
+    "@typescript-eslint/no-explicit-any": "warn", // Advierte sobre el uso de "any" explícito en TypeScript
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".ts", ".tsx", ".jsx"] }], // Permite archivos con extensiones .js, .ts, .tsx y .jsx para JSX en React
+    "quotes": "error", // Desactiva la regla que impone un estilo de comillas específico <-
+    "space-before-function-paren": "off", // Desactiva la regla que requiere un espacio antes del paréntesis de apertura de una función <-
+    "no-unused-vars": "off", // Desactiva la regla que marca las variables no utilizadas
+    "react-hooks/exhaustive-deps": "off", // Desactiva la regla que verifica todas las dependencias en los useEffect de React
+    "no-console": "warn", // Advierte sobre el uso de la función console.log y otras funciones de consola
+    "no-debugger": "warn", // Advierte sobre el uso de la sentencia debugger como un error
+    "react/jsx-uses-vars": "error", // Marca como error el uso de variables no definidas en JSX
+    "prefer-const": "error", // Marca el uso de var en lugar de const o let como un error
+    "no-undef": "error", // Marca el uso de variables no definidas como un error
+    "no-const-assign": "error", // Marca la reasignación de constantes como un error
+    "no-duplicate-imports": "error", // Marca las importaciones duplicadas como un error
+    "no-dupe-args": "error", // Marca los argumentos duplicados en una función como un error
+    "no-dupe-keys": "error", // Marca las claves duplicadas en un objeto literal como un error
+    "no-self-compare": "error", // Marca las comparaciones consigo mismo como un error
+    "no-unreachable": "error", // Marca el código inalcanzable como un error
+    "camelcase": ["error", { "ignoreDestructuring": true }], // Requiere el uso de camel case para nombres de variables y propiedades
+    "eqeqeq": 1, // Advierte sobre el uso de == y != en lugar de === y !==
+    "no-alert": 1, // Advierte sobre el uso de la función alert
+    "no-magic-numbers": "error", // Marca el uso de números mágicos (números literales sin explicación) como un error
+    "no-var": "error", // Marca el uso de var en lugar de const o let como un error
+    "object-shorthand": 1 // Advierte sobre el uso de notación abreviada de objetos cuando es posible
+  }
 }

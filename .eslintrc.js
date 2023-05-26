@@ -4,12 +4,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'standard',
-    'prettier'
-  ],
+  extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -19,17 +14,5 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
-  rules: {
-    '@next/next/no-img-element': 'off',
-    'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'react/jsx-filename-extension': [
-      1,
-      { extensions: ['.js', '.ts', '.tsx', '.jsx'] }
-    ],
-    quotes: 'off',
-    'space-before-function-paren': 'off',
-    'no-unused-vars': 'off'
-  }
+  plugins: ['react', '@typescript-eslint']
 }
