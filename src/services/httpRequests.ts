@@ -1,12 +1,18 @@
-import axios, { AxiosResponse, Method } from 'axios'
+import axios, { AxiosError, AxiosResponse, Method } from 'axios'
 import queryString from 'query-string'
+import { MESSAGE_CODES } from './messageCodes.enum'
 
-enum TypeService {
+enum SERVICE_TYPES {
   GET = 'GET',
   POST = 'POST',
   PUT = 'PUT',
   DELETE = 'DELETE',
   PATCH = 'PATCH'
+}
+
+enum RESPONSE_TYPES {
+  OK,
+  ERROR
 }
 
 const PATH = process.env.NEXT_PUBLIC_BACKEND_URL
@@ -23,6 +29,19 @@ interface BaseRequestConfig {
 type RequestConfig<T = any> = BaseRequestConfig & {
   url: string
   method: Method
+  data?: T
+}
+
+type HttpRequestResponse<T = any> = {
+  data?: T
+  messageCode: MESSAGE_CODES
+  statusCode: number
+  error?: string
+}
+
+type StandardResponse<T = any> = {
+  responseType: RESPONSE_TYPES
+  messageCode?: MESSAGE_CODES
   data?: T
 }
 
@@ -56,13 +75,23 @@ const createRequestConfig = <T>(
  * @param configuration - Configuración de la solicitud.
  * @returns Una promesa que se resuelve con la respuesta de la solicitud.
  */
-const executeRequest = async <T>(configuration: RequestConfig<T>): Promise<AxiosResponse<T>> => {
+const executeRequest = async <T>(configuration: RequestConfig<T>): Promise<StandardResponse<T>> => {
   try {
-    const response: AxiosResponse<T> = await axios(configuration)
-    return response
+    const response: AxiosResponse<HttpRequestResponse<T>> = await axios(configuration)
+    return {
+      responseType: RESPONSE_TYPES.OK,
+      messageCode: response.data.messageCode,
+      data: response.data?.data
+    }
   } catch (error) {
     console.log(error)
-    throw error
+    const castedError: AxiosError<HttpRequestResponse> = error as AxiosError<HttpRequestResponse>
+
+    return {
+      responseType: RESPONSE_TYPES.ERROR,
+      messageCode: castedError.response?.data?.messageCode,
+      data: castedError.response?.data?.data
+    }
   }
 }
 
@@ -75,8 +104,8 @@ const executeRequest = async <T>(configuration: RequestConfig<T>): Promise<Axios
 export const getData = async <T>(
   url: string,
   params?: Record<string, unknown>
-): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.GET, url, params)
+): Promise<StandardResponse<T>> => {
+  const configuration = createRequestConfig<T>(SERVICE_TYPES.GET, url, params)
   return executeRequest<T>(configuration)
 }
 
@@ -89,8 +118,8 @@ export const getData = async <T>(
 export const deleteData = async <T>(
   url: string,
   params?: Record<string, unknown>
-): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.DELETE, url, params)
+): Promise<StandardResponse<T>> => {
+  const configuration = createRequestConfig<T>(SERVICE_TYPES.DELETE, url, params)
   return executeRequest<T>(configuration)
 }
 
@@ -105,8 +134,8 @@ export const postData = async <T>(
   url: string,
   params: Record<string, unknown> = {},
   data: string | Record<string, unknown> = {}
-): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.POST, url, params, data)
+): Promise<StandardResponse<T>> => {
+  const configuration = createRequestConfig<T>(SERVICE_TYPES.POST, url, params, data)
   return executeRequest<T>(configuration)
 }
 
@@ -121,7 +150,7 @@ export const patchData = async <T>(
   url: string,
   data: any,
   params: Record<string, unknown>
-): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.PATCH, url, params, data)
+): Promise<StandardResponse<T>> => {
+  const configuration = createRequestConfig<T>(SERVICE_TYPES.PATCH, url, params, data)
   return executeRequest<T>(configuration)
 }
