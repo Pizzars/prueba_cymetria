@@ -46,13 +46,14 @@ type StandardResponse<T = any> = {
 }
 
 /**
- * Crea la configuración de la solicitud HTTP común a todas las solicitudes.
- * @param method - Método HTTP de la solicitud.
- * @param url - URL de la solicitud.
- * @param params - Parámetros de la solicitud.
- * @param data - Datos de la solicitud.
- * @returns La configuración de la solicitud.
+ * Creates the common HTTP request configuration for all requests.
+ * @param method - The HTTP method of the request.
+ * @param url - The URL of the request.
+ * @param params - The parameters of the request.
+ * @param data - The data of the request.
+ * @returns The request configuration.
  */
+
 const createRequestConfig = <T>(
   method: Method,
   url: string,
@@ -71,10 +72,11 @@ const createRequestConfig = <T>(
 }
 
 /**
- * Realiza una solicitud HTTP utilizando la configuración proporcionada.
- * @param configuration - Configuración de la solicitud.
- * @returns Una promesa que se resuelve con la respuesta de la solicitud.
+ * Performs an HTTP request using the provided configuration.
+ * @param configuration - The request configuration.
+ * @returns A promise that resolves with the request response.
  */
+
 const executeRequest = async <T>(configuration: RequestConfig<T>): Promise<StandardResponse<T>> => {
   try {
     const response: AxiosResponse<HttpRequestResponse<T>> = await axios(configuration)
@@ -96,11 +98,12 @@ const executeRequest = async <T>(configuration: RequestConfig<T>): Promise<Stand
 }
 
 /**
- * Realiza una solicitud HTTP GET.
- * @param url - URL de la solicitud.
- * @param params - Parámetros de la solicitud.
- * @returns Una promesa que se resuelve con la respuesta de la solicitud.
+ * Performs an HTTP GET request.
+ * @param url - The URL of the request.
+ * @param params - The parameters of the request.
+ * @returns A promise that resolves with the request response.
  */
+
 export const getData = async <T>(
   url: string,
   params?: Record<string, unknown>
@@ -110,11 +113,12 @@ export const getData = async <T>(
 }
 
 /**
- * Realiza una solicitud HTTP DELETE.
- * @param url - URL de la solicitud.
- * @param params - Parámetros de la solicitud.
- * @returns Una promesa que se resuelve con la respuesta de la solicitud.
+ * Performs an HTTP DELETE request.
+ * @param url - The URL of the request.
+ * @param params - The parameters of the request.
+ * @returns A promise that resolves with the request response.
  */
+
 export const deleteData = async <T>(
   url: string,
   params?: Record<string, unknown>
@@ -124,12 +128,13 @@ export const deleteData = async <T>(
 }
 
 /**
- * Realiza una solicitud HTTP POST.
- * @param url - URL de la solicitud.
- * @param params - Parámetros de la solicitud.
- * @param data - Datos de la solicitud.
- * @returns Una promesa que se resuelve con la respuesta de la solicitud.
+ * Performs an HTTP POST request.
+ * @param url - The URL of the request.
+ * @param params - The parameters of the request.
+ * @param data - The data of the request.
+ * @returns A promise that resolves with the request response.
  */
+
 export const postData = async <T>(
   url: string,
   params: Record<string, unknown> = {},
@@ -140,12 +145,13 @@ export const postData = async <T>(
 }
 
 /**
- * Realiza una solicitud HTTP PATCH.
- * @param url - URL de la solicitud.
- * @param data - Datos de la solicitud.
- * @param params - Parámetros de la solicitud.
- * @returns Una promesa que se resuelve con la respuesta de la solicitud.
+ * Performs an HTTP PATCH request.
+ * @param url - The URL of the request.
+ * @param data - The data of the request.
+ * @param params - The parameters of the request.
+ * @returns A promise that resolves with the request response.
  */
+
 export const patchData = async <T>(
   url: string,
   data: any,
