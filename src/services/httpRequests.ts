@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, Method } from 'axios'
 import queryString from 'query-string'
 
-enum TypeService {
+enum TYPES_SERVICE {
   GET = 'GET',
   POST = 'POST',
   PUT = 'PUT',
@@ -76,7 +76,7 @@ export const getData = async <T>(
   url: string,
   params?: Record<string, unknown>
 ): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.GET, url, params)
+  const configuration = createRequestConfig<T>(TYPES_SERVICE.GET, url, params)
   return executeRequest<T>(configuration)
 }
 
@@ -90,7 +90,7 @@ export const deleteData = async <T>(
   url: string,
   params?: Record<string, unknown>
 ): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.DELETE, url, params)
+  const configuration = createRequestConfig<T>(TYPES_SERVICE.DELETE, url, params)
   return executeRequest<T>(configuration)
 }
 
@@ -106,7 +106,7 @@ export const postData = async <T>(
   params: Record<string, unknown> = {},
   data: string | Record<string, unknown> = {}
 ): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.POST, url, params, data)
+  const configuration = createRequestConfig<T>(TYPES_SERVICE.POST, url, params, data)
   return executeRequest<T>(configuration)
 }
 
@@ -122,6 +122,6 @@ export const patchData = async <T>(
   data: any,
   params: Record<string, unknown>
 ): Promise<AxiosResponse<T>> => {
-  const configuration = createRequestConfig<T>(TypeService.PATCH, url, params, data)
+  const configuration = createRequestConfig<T>(TYPES_SERVICE.PATCH, url, params, data)
   return executeRequest<T>(configuration)
 }
