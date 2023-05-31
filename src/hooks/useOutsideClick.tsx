@@ -1,9 +1,9 @@
 import { RefObject, useEffect } from 'react'
 
 /**
- * Hook que detecta clics realizados fuera de un elemento específico.
- * @param ref La referencia al elemento que se desea observar.
- * @param callback La función de callback que se ejecutará cuando se haga clic fuera del elemento.
+ * Hook that detects clicks outside a specific element.
+ * @param ref The reference to the element you want to observe.
+ * @param callback The callback function to be executed when a click outside the element occurs.
  */
 
 function useOutsideClick(ref: RefObject<HTMLElement>, callback: () => void): void {

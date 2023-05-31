@@ -1,10 +1,11 @@
 import { useState, useCallback } from 'react'
 
 /**
- * Hook que proporciona una función para alternar entre dos estados booleanos.
- * @param initialValue El valor inicial del estado booleano.
- * @returns Un array con el estado booleano actual y la función para alternar el estado.
+ * Hook that provides a function to toggle between two boolean states.
+ * @param initialValue The initial value of the boolean state.
+ * @returns An array with the current boolean state and the function to toggle the state.
  */
+
 function useToggle(initialValue: boolean): [boolean, () => void] {
   const [value, setValue] = useState<boolean>(initialValue)
 
