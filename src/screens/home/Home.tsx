@@ -1,12 +1,12 @@
 import AboutHome from './components/AboutHome'
-import Banner from './components/Banner'
+import BannerHome from './components/BannerHome'
 import ServicesHome from './components/ServicesHome'
 import VideoHome from './components/VideoHome'
 
 const Home = () => {
   return (
     <div>
-      <Banner />
+      <BannerHome />
       <AboutHome />
       <ServicesHome />
       <VideoHome />

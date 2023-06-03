@@ -29,7 +29,7 @@ const Footer = () => {
         <div className='flex flex-col items-center font-Classico-URW text-primary'>
           <Link href={ROUTES.CONTACT} shallow>
             <div className='px-6 py-2 bg-primary text-white rounded-lg text-lg font-bold shadow-lg'>
-              Iniciar Sesión
+              CONTÁCTANOS
             </div>
           </Link>
           <div className='flex items-center my-[25px] '>

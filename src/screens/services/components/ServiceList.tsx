@@ -49,13 +49,24 @@ const services = [
     title: 'Consultas Especializadas 4',
     description: 'Ofrecemos consultas con médicos especializados en diversas áreas de la salud.',
     icon: service2.src
+  },
+  {
+    id: 9,
+    title: 'Exámenes Médicos 5',
+    description: 'Realizamos exámenes médicos completos para evaluar tu estado de salud general.',
+    icon: service1.src
+  },
+  {
+    id: 10,
+    title: 'Consultas Especializadas 5',
+    description: 'Ofrecemos consultas con médicos especializados en diversas áreas de la salud.',
+    icon: service2.src
   }
 ]
 
-const ServicesHome = () => {
+const ServiceList = () => {
   return (
-    <div className='flex flex-col justify-center items-center py-12 '>
-      <h2 className=' text-primary mb-8 font-bold text-2xl'>Nuestros servicios</h2>
+    <div className='flex flex-col justify-center items-center py-12 bg-white'>
       <div className='grid grid-cols-4 gap-8 content-center '>
         {services.map(service => (
           <div
@@ -76,11 +87,8 @@ const ServicesHome = () => {
           </div>
         ))}
       </div>
-      <a href='#' className='text-secondary underline font-bold mt-8 hover:text-primary'>
-        Ver más servicios
-      </a>
     </div>
   )
 }
 
-export default ServicesHome
+export default ServiceList
