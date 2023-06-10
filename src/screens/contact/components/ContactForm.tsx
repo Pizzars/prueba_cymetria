@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Button from 'src/screens/general/buttons/Button'
+import { sendContactEmail } from 'src/services/lambda'
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -12,6 +13,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
+    sendContactEmail(form)
   }
 
   const onChange = (e: any) => {
@@ -31,15 +33,27 @@ const ContactForm = () => {
           className='border outline-primary rounded border-secondary mt-2 py-2 px-4 w-full'
           name='name'
           onChange={onChange}
+          required
         />
       </label>
       <label className='flex flex-col w-full mx-12 mt-8'>
         <span className='text-secondary font-bold'>Correo</span>
         <input
-          type='text'
+          type='email'
           className='border rounded outline-primary border-secondary mt-2 py-2 px-4 w-full'
           name='email'
           onChange={onChange}
+          required
+        />
+      </label>
+      <label className='flex flex-col w-full mx-12 mt-8'>
+        <span className='text-secondary font-bold'>Teléfono</span>
+        <input
+          type='text'
+          className='border rounded outline-primary border-secondary mt-2 py-2 px-4 w-full'
+          name='phone'
+          onChange={onChange}
+          required
         />
       </label>
       <label className='flex flex-col w-full mx-12 mt-8'>
@@ -48,6 +62,7 @@ const ContactForm = () => {
           className='border rounded outline-primary border-secondary mt-2 py-2 px-4 w-full resize-none h-[10rem]'
           name='message'
           onChange={onChange}
+          required
         />
       </label>
       <Button text='Contactar ahora' className='mt-8 ' onClick={() => null}></Button>

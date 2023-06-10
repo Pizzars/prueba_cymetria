@@ -12,8 +12,10 @@
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx}\" \"./app/**/*.{js,jsx,ts,tsx}\" \"./!(node_modules|.next)/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "aws-amplify": "^5.2.5",
     "axios": "^1.4.0",
     "next": "^13.0.2",
+    "nodemailer": "^6.9.3",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import service1 from '../../../assets/services/service1.jpg'
 import service2 from '../../../assets/services/service2.jpg'
+import ServiceItem from './ServiceItem'
 
-const services = [
+export const services = [
   {
     id: 1,
     title: 'Exámenes Médicos',
@@ -69,22 +71,7 @@ const ServiceList = () => {
     <div className='flex flex-col justify-center items-center py-12 bg-white'>
       <div className='grid grid-cols-4 gap-8 content-center '>
         {services.map(service => (
-          <div
-            key={service.id}
-            className='bg-white rounded-lg overflow-hidden shadow-lg w-[14rem] h-[14rem] relative cursor-pointer'
-          >
-            <img
-              src={service.icon}
-              alt={service.title}
-              className='w-[14rem] h-[14rem] object-cover'
-            />
-            <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-t from-secondary hover:from-primary to-transparent text-white '>
-              <h3 className='text-lg font-bold flex items-end justify-center mx-8 text-center h-full pb-4 '>
-                {service.title}
-              </h3>
-              {/* <p className='text-gray-700'>{service.description}</p> */}
-            </div>
-          </div>
+          <ServiceItem service={service} key={service.id} />
         ))}
       </div>
     </div>
