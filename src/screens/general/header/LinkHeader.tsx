@@ -13,7 +13,7 @@ const LinkHeader = ({ href, text }: Params) => {
       <div
         className={`${
           pathname === href ? 'text-primary drop-shadow-sm' : 'text-secondary'
-        } text-sm ml-12 hover:text-primary font-bold`}
+        } text-2xl my-4 md:my-0 md:text-sm md:ml-12 hover:text-primary font-bold`}
       >
         {text}
       </div>

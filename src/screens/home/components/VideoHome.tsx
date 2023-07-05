@@ -9,7 +9,7 @@ const VideoHome = () => {
         title='YouTube video player'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
         allowFullScreen
-        className='rounded-lg shadow-lg w-[38rem] h-[20rem]'
+        className='rounded-lg shadow-lg max-w-[90%] md:w-[38rem] h-[20rem]'
       ></iframe>
     </div>
   )

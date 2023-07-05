@@ -58,7 +58,7 @@ const ServicesHome = () => {
   return (
     <div className='flex flex-col justify-center items-center py-12 '>
       <h2 className=' text-primary mb-8 font-bold text-2xl'>Nuestros servicios</h2>
-      <div className='grid grid-cols-4 gap-8 content-center '>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-8 content-center '>
         {services.map(service => (
           <ServiceItem service={service} key={service.id} />
         ))}

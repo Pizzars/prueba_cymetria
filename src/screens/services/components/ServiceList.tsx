@@ -69,7 +69,7 @@ export const services = [
 const ServiceList = () => {
   return (
     <div className='flex flex-col justify-center items-center py-12 bg-white'>
-      <div className='grid grid-cols-4 gap-8 content-center '>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-8 content-center '>
         {services.map(service => (
           <ServiceItem service={service} key={service.id} />
         ))}

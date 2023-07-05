@@ -7,7 +7,7 @@ const Contact = () => {
     <div>
       <BannerContact />
       <div className='bg-white flex justify-center w-full'>
-        <div className='flex items-center'>
+        <div className='flex-col-reverse md:flex-row flex items-center'>
           <ContactInfo />
           <ContactForm />
         </div>

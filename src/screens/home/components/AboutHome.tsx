@@ -3,8 +3,8 @@ import about from '../../../assets/home/about.jpg'
 import { ROUTES } from 'src/constants/routes'
 const AboutHome = () => {
   return (
-    <div className='flex items-center py-8 bg-white'>
-      <div className='relative w-[38rem] flex justify-center'>
+    <div className='flex-col md:flex-row flex items-center py-8 bg-white'>
+      <div className='relative w-[80%] mb-8 md:mb-0 md:w-[38rem] flex justify-center'>
         <img className='w-[30rem] rounded-lg shadow-lg' src={about.src} alt='health' />
       </div>
       <div className='flex-1 px-12 flex flex-col items-center justify-center'>
