@@ -1,68 +1,40 @@
-import Link from 'next/link'
-import service1 from '../../../assets/services/service1.jpg'
-import service2 from '../../../assets/services/service2.jpg'
+import service1 from '../../../assets/services/ANALISI_DE_PUESTO_DE_TRABAJO.jpg'
+import service2 from '../../../assets/services/FONOAUDILOGIA.jpg'
+import service3 from '../../../assets/services/MEDICINA_GENERAL.jpg'
+import service4 from '../../../assets/services/OPTOMETRIA.jpg'
+import service5 from '../../../assets/services/PSICOLOGIA.jpg'
 import ServiceItem from './ServiceItem'
 
 export const services = [
   {
     id: 1,
-    title: 'Exámenes Médicos',
-    description: 'Realizamos exámenes médicos completos para evaluar tu estado de salud general.',
+    title: 'ANALISI DE PUESTO DE TRABAJO',
+    description: '',
     icon: service1.src
   },
   {
     id: 2,
-    title: 'Consultas Especializadas',
-    description: 'Ofrecemos consultas con médicos especializados en diversas áreas de la salud.',
+    title: 'FONOAUDILOGIA',
+    description: '',
     icon: service2.src
   },
   {
     id: 3,
-    title: 'Exámenes Médicos 2',
-    description: 'Realizamos exámenes médicos completos para evaluar tu estado de salud general.',
-    icon: service1.src
+    title: 'MEDICINA GENERAL',
+    description: '',
+    icon: service3.src
   },
   {
     id: 4,
-    title: 'Consultas Especializadas 2',
-    description: 'Ofrecemos consultas con médicos especializados en diversas áreas de la salud.',
-    icon: service2.src
+    title: 'OPTOMETRIA',
+    description: '',
+    icon: service4.src
   },
   {
     id: 5,
-    title: 'Exámenes Médicos 3',
-    description: 'Realizamos exámenes médicos completos para evaluar tu estado de salud general.',
-    icon: service1.src
-  },
-  {
-    id: 6,
-    title: 'Consultas Especializadas 3',
-    description: 'Ofrecemos consultas con médicos especializados en diversas áreas de la salud.',
-    icon: service2.src
-  },
-  {
-    id: 7,
-    title: 'Exámenes Médicos 4',
-    description: 'Realizamos exámenes médicos completos para evaluar tu estado de salud general.',
-    icon: service1.src
-  },
-  {
-    id: 8,
-    title: 'Consultas Especializadas 4',
-    description: 'Ofrecemos consultas con médicos especializados en diversas áreas de la salud.',
-    icon: service2.src
-  },
-  {
-    id: 9,
-    title: 'Exámenes Médicos 5',
-    description: 'Realizamos exámenes médicos completos para evaluar tu estado de salud general.',
-    icon: service1.src
-  },
-  {
-    id: 10,
-    title: 'Consultas Especializadas 5',
-    description: 'Ofrecemos consultas con médicos especializados en diversas áreas de la salud.',
-    icon: service2.src
+    title: 'PSICOLOGIA',
+    description: '',
+    icon: service5.src
   }
 ]
 

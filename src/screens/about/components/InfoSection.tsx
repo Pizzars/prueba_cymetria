@@ -15,8 +15,12 @@ const InfoSection = ({ image, title, text, left = true, color = 'bg-white', chil
       } flex items-center py-8 ${color}`}
     >
       {left && image && (
-        <div className='relative w-[80%] mb-8 md:mb-0 md:w-[38rem] flex justify-center'>
-          <img className='w-[100%] md:w-[30rem] rounded-lg shadow-lg' src={image} alt='health' />
+        <div className='relative w-[80%] mb-8 md:mb-0 md:w-[38rem] max-h-[26rem] object-cover flex justify-center'>
+          <img
+            className='w-[100%] object-cover md:w-[30rem] rounded-lg shadow-lg'
+            src={image}
+            alt='health'
+          />
         </div>
       )}
       <div className='flex-1 px-12 flex flex-col items-center justify-center'>

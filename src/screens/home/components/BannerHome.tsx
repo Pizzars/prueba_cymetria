@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Banner from 'src/screens/general/banner/Banner'
 import banner from '../../../assets/home/banner.jpg'
 
@@ -8,13 +9,19 @@ const BannerHome = () => {
       text='Contáctanos hoy mismo para conocer nuestros servicios de calidad.'
       image={banner.src}
     >
-      <div>
-        <button className='bg-white text-secondary font-bold text-lg py-2 px-4 rounded-lg'>
+      <div className='mt-8'>
+        <Link
+          href='/contacto'
+          className='bg-white text-secondary font-bold text-lg py-2 px-4 rounded-lg'
+        >
           Contáctanos
-        </button>
-        <button className='bg-secondary text-white ml-4 font-bold text-lg py-2 px-4 rounded-lg'>
+        </Link>
+        <Link
+          href='/servicios'
+          className='bg-secondary text-white ml-4 font-bold text-lg py-2 px-4 rounded-lg'
+        >
           Ver servicios
-        </button>
+        </Link>
       </div>
     </Banner>
     // <div className='bg-primary flex justify-between items-center'>

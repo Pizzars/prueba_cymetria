@@ -8,7 +8,7 @@ import { services } from '../components/ServiceList'
 const DetailService = () => {
   const { id } = useParams()
 
-  const service = services.find(s => s.id == (id as any))
+  const service = services.find(s => s.title.toLowerCase().replaceAll(' ', '-') == (id as any))
 
   if (!service) return <div></div>
 
