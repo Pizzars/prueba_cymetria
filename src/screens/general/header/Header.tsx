@@ -3,15 +3,15 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { ROUTES } from 'src/constants/routes'
-import logo from '../../../assets/general/logo_header.png'
+import logo from '../../../assets/general/logo_header-white.png'
 import LinkHeader from './LinkHeader'
 
 const Header = () => {
   const [show, setShow] = useState(false)
   return (
-    <div className='w-full h-[5rem] flex justify-between items-center px-8 shadow-lg bg-white'>
+    <div className='absolute top-o left-0 w-full z-10 h-[7rem] flex justify-between items-center px-8 '>
       <Link href={ROUTES.HOME} shallow>
-        <img className='w-[12rem]' src={logo.src} alt='Logo' />
+        <img className='w-[16rem]' src={logo.src} alt='Logo' />
       </Link>
       <div className='md:flex flex-1 hidden items-center justify-end'>
         <LinkHeader href={`${ROUTES.HOME}`} text='Home' />
@@ -19,7 +19,7 @@ const Header = () => {
         <LinkHeader href={`${ROUTES.SERVICES}`} text='Servicios' />
         <LinkHeader href={`${ROUTES.CONTACT}`} text='Contacto' />
         <Link href={ROUTES.APP} shallow>
-          <div className='px-4 py-1 ml-8 bg-primary text-white rounded-lg texl-sm shadow-sm'>
+          <div className='px-4 py-1 ml-8 bg-secondary text-white rounded-lg texl-sm shadow-sm'>
             Iniciar Sesión
           </div>
         </Link>

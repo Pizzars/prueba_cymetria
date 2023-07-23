@@ -8,7 +8,7 @@ interface Params {
 
 const BasePage = ({ children }: Params) => {
   return (
-    <div>
+    <div className='w-full'>
       <Header />
       {children}
       <Footer />

@@ -12,8 +12,8 @@ const LinkHeader = ({ href, text }: Params) => {
     <Link href={`${href}`} shallow>
       <div
         className={`${
-          pathname === href ? 'text-primary drop-shadow-sm' : 'text-secondary'
-        } text-2xl my-4 md:my-0 md:text-sm md:ml-12 hover:text-primary font-bold`}
+          pathname === href ? 'text-secondary drop-shadow-sm underline ' : 'text-secondary'
+        } text-2xl my-4 md:my-0 md:text-sm md:ml-12 hover:underline font-bold`}
       >
         {text}
       </div>

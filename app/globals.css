@@ -27,3 +27,28 @@ a {
     @apply bg-black text-white
   }
 }
+
+.container-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.container-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: none;
+}
+
+.container-scroll.x {
+  flex-flow: row nowrap;
+}
+
+.x.mandatory-scroll-snapping {
+  scroll-snap-type: x mandatory;
+}
+
+.container-scroll > div {
+  text-align: center;
+  scroll-snap-align: center;
+  flex: none;
+}

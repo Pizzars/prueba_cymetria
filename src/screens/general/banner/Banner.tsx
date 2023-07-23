@@ -14,8 +14,8 @@ const Banner = ({ image, title, text, children }: Params) => {
         {children}
       </div>
       <div className='relative hidden md:block'>
-        <img className='w-[38rem] ' src={image} alt='health' />
-        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary to-transparent ' />
+        <img className='w-[40rem] ' src={image} alt='health' />
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary to-transparent' />
       </div>
     </div>
   )
