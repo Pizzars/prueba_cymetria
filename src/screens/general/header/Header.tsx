@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
 import { ROUTES } from 'src/constants/routes'
 import logo from '../../../assets/general/logo_header-white.png'
@@ -8,8 +9,14 @@ import LinkHeader from './LinkHeader'
 
 const Header = () => {
   const [show, setShow] = useState(false)
+  const route = usePathname()
+  const isApp = route === '/app'
   return (
-    <div className='absolute top-o left-0 w-full z-10 h-[7rem] flex justify-between items-center px-8 bg-gradient-to-b from-primary to-transparent'>
+    <div
+      className={`absolute top-o left-0 w-full z-10 h-[7rem] flex justify-between items-center px-8 ${
+        isApp ? 'bg-primary' : ' bg-gradient-to-b from-primary to-transparent'
+      } `}
+    >
       <Link href={ROUTES.HOME} shallow>
         <img className='w-[16rem]' src={logo.src} alt='Logo' />
       </Link>

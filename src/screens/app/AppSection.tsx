@@ -1,6 +1,7 @@
 const AppSection = () => {
   return (
     <div className='bg-white'>
+      <div className='h-24'></div>
       <iframe
         width='100%'
         className='h-[100vh] border-none'
