@@ -4,6 +4,8 @@ const SECUNDARY_COLOR = '#333333'
 const SECUNDARY_COLOR_2 = '#f5f5f5'
 const SECUNDARY_COLOR_3 = '#cccccc'
 
+const WHITE_OPACITY = '##ffffff80'
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -17,7 +19,8 @@ module.exports = {
         primaryopacity: PRIMARY_COLOR_OPACITY,
         secondary: SECUNDARY_COLOR,
         'secondary-200': SECUNDARY_COLOR_2,
-        'secondary-400': SECUNDARY_COLOR_3
+        'secondary-400': SECUNDARY_COLOR_3,
+        'white-back': WHITE_OPACITY
       }
     }
   },

@@ -8,7 +8,7 @@ interface Params {
 const Banner = ({ image, title, text, children }: Params) => {
   return (
     <div className='bg-primary flex flex-col-reverse md:flex-row justify-between items-center'>
-      <div className='hidden md:block pb-8 mt-24 md:mt-10 md:py-4 p-4 md:mr-8 text-center md:text-left md:ml-14'>
+      <div className='hidden md:block pb-8 mt-24 md:mt-10 md:py-4 p-4 md:mr-8 text-center md:text-left md:ml-14 md:max-w-[45vw]'>
         <h1 className='text-4xl md:text-5xl font-bold text-white mb-2'>{title}</h1>
         <p className='text-xl text-white mb-4'>{text}</p>
         {children}

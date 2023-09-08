@@ -7,7 +7,6 @@ const ServicesHome = () => {
   const [position, setPosition] = useState(1)
 
   const change = (next: boolean) => {
-    debugger
     const container = document.getElementById('container-services')
     const pos = next
       ? position + 1 > services.length

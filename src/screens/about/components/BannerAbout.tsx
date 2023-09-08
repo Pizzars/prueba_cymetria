@@ -6,7 +6,7 @@ const BannerAbout = () => {
   return (
     <Banner
       title='AEQUSST'
-      text='Seguridad y salud en el trabajo: Nuestra prioridad, tu bienestar'
+      text='Contáctanos, estamos aquí para brindarte soluciones integrales y personalizadas que priorizan la salud y bienestar de tus empleados.'
       image={banner.src}
     >
       <div className='mt-8'>

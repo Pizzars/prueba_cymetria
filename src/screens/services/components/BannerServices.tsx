@@ -5,7 +5,7 @@ const BannerServices = () => {
   return (
     <Banner
       title='Nuestros servicios'
-      text='Contáctanos hoy mismo para conocer nuestros servicios de calidad.'
+      text='Contáctanos, estamos aquí para brindarte soluciones integrales y personalizadas que priorizan la salud y bienestar de tus empleados.'
       image={banner.src}
     >
       <div>

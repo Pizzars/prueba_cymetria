@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import ContextPage from 'src/screens/general/base/ContextPage'
 import './globals.css'
+import bg from '../src/assets/general/bg.jpg'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [splash, setSplash] = useState(false)
@@ -21,7 +22,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head */}
         </head>
-        <body className='bg-secondary-200'>{children}</body>
+        <body
+          className='bg-secondary-200'
+          style={{
+            background: `url(${bg.src})`
+          }}
+        >
+          {children}
+        </body>
       </html>
     </ContextPage.Provider>
   )

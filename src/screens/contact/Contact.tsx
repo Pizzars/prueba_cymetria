@@ -6,7 +6,10 @@ const Contact = () => {
   return (
     <div>
       <BannerContact />
-      <div className='bg-white flex justify-center w-full'>
+      <div
+        className='bg-white flex justify-center w-full'
+        style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}
+      >
         <div className='flex-col-reverse md:flex-row flex items-center'>
           <ContactInfo />
           <ContactForm />

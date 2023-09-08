@@ -10,6 +10,20 @@ interface Params {
   service: ServiceModel
 }
 
+function removeSpecial(text: string) {
+  // Definir arrays de vocales con y sin tilde
+  const vocalesConTilde = ['á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú']
+  const vocalesSinTilde = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+
+  // Reemplazar vocales con tilde por vocales sin tilde
+  for (let i = 0; i < vocalesConTilde.length; i++) {
+    const regex = new RegExp(vocalesConTilde[i], 'g')
+    text = text.replace(regex, vocalesSinTilde[i])
+  }
+
+  return text
+}
+
 const ServiceItem = ({ service }: Params) => {
   return (
     <div
@@ -17,7 +31,7 @@ const ServiceItem = ({ service }: Params) => {
       className=' mx-4 bg-white rounded-full overflow-hidden w-[10rem] md:w-[12rem] h-[10rem] md:h-[12rem] relative cursor-pointer carousel-item'
     >
       <Link
-        href={`/servicios/${service.title.toLowerCase().replaceAll(' ', '-')}`}
+        href={`/servicios/${removeSpecial(service.title).toLowerCase().replaceAll(' ', '-')}`}
         key={service.id}
       >
         <img src={service.icon} alt={service.title} className='w-[14rem] h-[14rem] object-cover' />
