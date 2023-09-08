@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
           <div className='flex items-center mb-[25px]'>
             <img className='mr-[10px] w-[1.5rem]' src={mail.src} alt='' />
-            <span>correo@correo.com</span>
+            <span>servicioalcliente@aequsstmedicinapreventiva.com</span>
           </div>
           {/*<div className='flex items-center'>*/}
           {/*  <img className='mr-[10px] w-[1rem]' src={address.src} alt='' />*/}

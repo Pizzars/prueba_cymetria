@@ -17,7 +17,7 @@ const ContactInfo = () => {
       </div>
       <div className='flex items-center mb-[25px]text-secondary'>
         <img className='mr-[10px] w-[1.5rem] ' src={mail.src} alt='' />
-        <span className='text-secondary'>correo@correo.com</span>
+        <span className='text-secondary'>servicioalcliente@aequsstmedicinapreventiva.com</span>
       </div>
     </div>
   )
