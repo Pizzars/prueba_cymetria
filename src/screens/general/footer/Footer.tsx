@@ -32,20 +32,37 @@ const Footer = () => {
               CONTÁCTANOS
             </div>
           </Link>
-          <div className='flex items-center my-[25px] '>
-            <img className='mr-[10px] w-[1rem]' src={phone.src} alt='' />
-            <span className=''>+57 ### ### ####</span>
-          </div>
-          <div className='flex items-center mb-[25px]'>
-            <img className='mr-[10px] w-[1.5rem]' src={mail.src} alt='' />
-            <span>servicioalcliente@aequsstmedicinapreventiva.com</span>
-          </div>
+
+          <Link href={'tel: +57 ### ### ####'} target='_blank' shallow>
+            <div className='flex items-center my-[25px] '>
+              <img className='mr-[10px] w-[1rem]' src={phone.src} alt='' />
+              <span className=''>+57 ### ### ####</span>
+            </div>
+          </Link>
+          <Link
+            href={'mailto: servicioalcliente@aequsstmedicinapreventiva.com'}
+            target='_blank'
+            shallow
+          >
+            <div className='flex items-center mb-[25px]'>
+              <img className='mr-[10px] w-[1.5rem]' src={mail.src} alt='' />
+              <span>servicioalcliente@aequsstmedicinapreventiva.com</span>
+            </div>
+          </Link>
           {/*<div className='flex items-center'>*/}
           {/*  <img className='mr-[10px] w-[1rem]' src={address.src} alt='' />*/}
           {/*  <span>Carrera 26 # 39-58, Bogotá, Colombia</span>*/}
           {/*</div>*/}
         </div>
       </div>
+      <Link href={'https://whatsapp.com'} target='_blank' shallow>
+        <div className='fixed bottom-8 right-0 h-16 bg-secondary border-primary border border-r-0 rounded-tl-xl button-contact-w-container rounded-bl-xl flex justify-center items-center'>
+          <img className='w-12 h-12 mx-2 my-2 object-contain' src={whatsapp.src} alt='' />
+          <div className={` mr-2 transition overflow-hidden button-contact-w text-primary`}>
+            Contactanos
+          </div>
+        </div>
+      </Link>
     </div>
   )
 }

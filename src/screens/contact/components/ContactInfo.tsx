@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import mail from '../../../assets/general/mailIcon.svg'
 import phone from '../../../assets/general/phoneIcon.svg'
 
@@ -11,14 +12,22 @@ const ContactInfo = () => {
         formulario de contacto.
       </p>
       <h3 className='text-2xl text-primary font-bold mb-4'>Información de contacto</h3>
-      <div className='flex items-center mb-[25px] text-secondary'>
-        <img className='mr-[10px] w-[1rem]' src={phone.src} alt='' />
-        <span className='text-secondary'>+57 ### ### ####</span>
-      </div>
-      <div className='flex items-center mb-[25px]text-secondary'>
-        <img className='mr-[10px] w-[1.5rem] ' src={mail.src} alt='' />
-        <span className='text-secondary'>servicioalcliente@aequsstmedicinapreventiva.com</span>
-      </div>
+      <Link href={'tel: +57 ### ### ####'} target='_blank' shallow>
+        <div className='flex items-center mb-[25px] text-secondary'>
+          <img className='mr-[10px] w-[1rem]' src={phone.src} alt='' />
+          <span className='text-secondary'>+57 ### ### ####</span>
+        </div>
+      </Link>
+      <Link
+        href={'mailto: servicioalcliente@aequsstmedicinapreventiva.com'}
+        target='_blank'
+        shallow
+      >
+        <div className='flex items-center mb-[25px] text-secondary'>
+          <img className='mr-[10px] w-[1.5rem] ' src={mail.src} alt='' />
+          <span className='text-secondary'>servicioalcliente@aequsstmedicinapreventiva.com</span>
+        </div>
+      </Link>
     </div>
   )
 }
