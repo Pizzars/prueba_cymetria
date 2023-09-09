@@ -15,7 +15,7 @@ const Footer = () => {
         <div className='flex flex-col items-center mb-[50px] lg:mb-0'>
           <img className=' w-[12rem]' src={logo.src} alt='' />
           <div className='flex items-center mt-[1rem]'>
-            <Link href={'https://whatsapp.com'} target='_blank' shallow>
+            <Link href={'https://api.whatsapp.com/send?phone=573112857543'} target='_blank' shallow>
               <img className='mx-[5px] w-[2.5rem]' src={whatsapp.src} alt='' />
             </Link>
             <Link href={'https://instagram.com'} target='_blank' shallow>
@@ -55,7 +55,7 @@ const Footer = () => {
           {/*</div>*/}
         </div>
       </div>
-      <Link href={'https://whatsapp.com'} target='_blank' shallow>
+      <Link href={'https://api.whatsapp.com/send?phone=573112857543'} target='_blank' shallow>
         <div className='fixed bottom-8 right-0 h-16 bg-secondary border-primary border border-r-0 rounded-tl-xl button-contact-w-container rounded-bl-xl flex justify-center items-center'>
           <img className='w-12 h-12 mx-2 my-2 object-contain' src={whatsapp.src} alt='' />
           <div className={` mr-2 transition overflow-hidden button-contact-w text-primary`}>
