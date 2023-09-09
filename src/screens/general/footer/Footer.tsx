@@ -33,10 +33,10 @@ const Footer = () => {
             </div>
           </Link>
 
-          <Link href={'tel: +57 ### ### ####'} target='_blank' shallow>
+          <Link href={'tel: +57-311-285-7543'} target='_blank' shallow>
             <div className='flex items-center my-[25px] '>
               <img className='mr-[10px] w-[1rem]' src={phone.src} alt='' />
-              <span className=''>+57 ### ### ####</span>
+              <span className=''>+57 311 285 7543</span>
             </div>
           </Link>
           <Link
@@ -59,7 +59,7 @@ const Footer = () => {
         <div className='fixed bottom-8 right-0 h-16 bg-secondary border-primary border border-r-0 rounded-tl-xl button-contact-w-container rounded-bl-xl flex justify-center items-center'>
           <img className='w-12 h-12 mx-2 my-2 object-contain' src={whatsapp.src} alt='' />
           <div className={` mr-2 transition overflow-hidden button-contact-w text-primary`}>
-            Contactanos
+            CONTÁCTANOS
           </div>
         </div>
       </Link>

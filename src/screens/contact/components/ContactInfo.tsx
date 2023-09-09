@@ -12,10 +12,10 @@ const ContactInfo = () => {
         formulario de contacto.
       </p>
       <h3 className='text-2xl text-primary font-bold mb-4'>Información de contacto</h3>
-      <Link href={'tel: +57 ### ### ####'} target='_blank' shallow>
+      <Link href={'tel: +57-311-285-7543'} target='_blank' shallow>
         <div className='flex items-center mb-[25px] text-secondary'>
           <img className='mr-[10px] w-[1rem]' src={phone.src} alt='' />
-          <span className='text-secondary'>+57 ### ### ####</span>
+          <span className='text-secondary'>+57 311 285 7543</span>
         </div>
       </Link>
       <Link
