@@ -3,6 +3,8 @@ import { useState } from 'react'
 import ContextPage from 'src/screens/general/base/ContextPage'
 import './globals.css'
 import bg from '../src/assets/general/bg.jpg'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [splash, setSplash] = useState(false)
@@ -29,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         >
           {children}
+          <ToastContainer />
         </body>
       </html>
     </ContextPage.Provider>
