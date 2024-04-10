@@ -6,7 +6,8 @@ import ContextPage from '../base/ContextPage'
 
 const Splash = () => {
   const [step, setStep] = useState(0)
-  const { splash, setSplash } = useContext(ContextPage) as any
+  // const { splash, setSplash } = useContext(ContextPage) as any
+  const [splash, setSplash] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {

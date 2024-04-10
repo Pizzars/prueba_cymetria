@@ -1,6 +1,5 @@
 'use client'
 import { useContext, useState } from 'react'
-import Splash from '../splash/Splash'
 import ContextPage from './ContextPage'
 
 const ContextState = () => {

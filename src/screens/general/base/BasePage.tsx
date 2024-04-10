@@ -2,7 +2,6 @@ import React from 'react'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import Splash from '../splash/Splash'
-import ContextState from './ContextState'
 
 interface Params {
   children: any
