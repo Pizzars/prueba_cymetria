@@ -8,6 +8,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='es'>
       <head>
         <title>AEQUSST Medicina Preventiva SAS</title>
+        <link rel='icon' href='/favicon.ico' />
+        <link rel='apple-touch-icon' href='/logo192.png' />
+        <meta name='theme-color' content='#75b6b6' />
         <meta
           name='description'
           content='Somos una IPS de salud ocupacional especializada en servicios integrales y exámenes médicos ocupacionales. Garantizamos un entorno seguro y saludable.'
@@ -16,8 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           name='keywords'
           content='salud ocupacional, exámenes médicos, bienestar laboral, seguridad laboral, productividad empresarial, salud y trabajo, servicios de salud, evaluaciones personalizadas, entorno laboral seguro, equipo multidisciplinario, expertos en salud ocupacional'
         />
-        {/* will contain the components returned by the nearest parent
-    head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head */}
       </head>
       <body
         className='bg-secondary-200'
