@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../../assets/general/logo.png'
-import whatsapp from '../../../assets/general/whatsappIcon.svg'
+import whatsapp from '../../../assets/general/whatsappIcon.png'
 import instagram from '../../../assets/general/instagranIcon.svg'
 import facebook from '../../../assets/general/facebookIcon.svg'
 import mail from '../../../assets/general/mailIcon.svg'
@@ -44,9 +44,11 @@ const Footer = () => {
             target='_blank'
             shallow
           >
-            <div className='flex items-center mb-[25px]'>
+            <div className='flex items-center mb-[25px] max-w-[80%] mx-auto overflow-hidden'>
               <img className='mr-[10px] w-[1.5rem]' src={mail.src} alt='' />
-              <span>servicioalcliente@aequsstmedicinapreventiva.com</span>
+              <span className=' text-ellipsis inline-block flex-1 truncate'>
+                servicioalcliente@aequsstmedicinapreventiva.com
+              </span>
             </div>
           </Link>
           {/*<div className='flex items-center'>*/}
@@ -56,9 +58,9 @@ const Footer = () => {
         </div>
       </div>
       <Link href={'https://api.whatsapp.com/send?phone=573112857543'} target='_blank' shallow>
-        <div className='fixed bottom-8 right-0 h-16 bg-secondary border-primary border border-r-0 rounded-tl-xl button-contact-w-container rounded-bl-xl flex justify-center items-center'>
+        <div className='fixed bottom-8 right-0 h-16 bg-[#2ac664] rounded-tl-xl button-contact-w-container rounded-bl-xl flex justify-center items-center'>
           <img className='w-12 h-12 mx-2 my-2 object-contain' src={whatsapp.src} alt='' />
-          <div className={` mr-2 transition overflow-hidden button-contact-w text-primary`}>
+          <div className={` mr-2 transition overflow-hidden button-contact-w text-white`}>
             CONTÁCTANOS
           </div>
         </div>

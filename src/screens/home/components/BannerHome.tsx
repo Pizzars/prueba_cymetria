@@ -5,8 +5,8 @@ import banner from '../../../assets/home/banner.jpg'
 const BannerHome = () => {
   return (
     <Banner
-      title='SALUD Y ÉXITO EN CADA PASO LABORAL'
-      text='Contáctanos, estamos aquí para brindarte soluciones integrales y personalizadas que priorizan la salud y bienestar de tus empleados.'
+      title='EXÁMENES MÉDICOS OCUPACIONALES'
+      // text='Contáctanos, estamos aquí para brindarte soluciones integrales y personalizadas que priorizan la salud y bienestar de tus empleados.'
       image={banner.src}
     >
       <div className='mt-8'>

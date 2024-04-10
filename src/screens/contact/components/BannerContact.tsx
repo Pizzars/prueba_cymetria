@@ -4,8 +4,9 @@ import banner from '../../../assets/home/banner.jpg'
 const BannerContact = () => {
   return (
     <Banner
-      title='Contactanos'
-      text='Contáctanos, estamos aquí para brindarte soluciones integrales y personalizadas que priorizan la salud y bienestar de tus empleados.'
+      // title='Contactanos'
+      title='EXÁMENES MÉDICOS OCUPACIONALES'
+      // text='Contáctanos, estamos aquí para brindarte soluciones integrales y personalizadas que priorizan la salud y bienestar de tus empleados.'
       image={banner.src}
     ></Banner>
   )

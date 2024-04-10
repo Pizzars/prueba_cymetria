@@ -8,7 +8,7 @@ const VideoHome = () => {
     >
       <h3 className='text-primary bold text-xl font-bold mb-8'>¿Cómo usar la plataforma?</h3>
       <iframe
-        src='https://www.youtube.com/embed/6mnSXOgvVJ0?si=X8ntjWceXHFkws3K'
+        src='https://www.youtube.com/embed/PJpeEc8j0IQ?si=5dsf7_UOvjGVGFln'
         title='YouTube video player'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
         allowFullScreen

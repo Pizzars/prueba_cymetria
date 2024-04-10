@@ -41,9 +41,9 @@ const ServicesHome = () => {
   // const list2 = services.slice(4, 8)
 
   return (
-    <div className='flex flex-col justify-center items-center py-12 md:px-24'>
+    <div className='flex flex-col justify-center items-center py-12'>
       <h2 className=' text-primary mb-8 font-bold text-2xl'>Nuestros servicios</h2>
-      <div className='w-full relative '>
+      <div className='w-full relative md:px-24'>
         <div className='absolute top-0 z-10 left-0 bg-gradient-to-r from-secondary-200 to-transparent primary w-12 h-[10rem] md:h-[12rem] flex justify-center items-center'>
           <button
             className=' w-[2rem] justify-center items-center flex h-full'
