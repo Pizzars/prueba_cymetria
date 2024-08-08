@@ -1,10 +1,5 @@
-const PRIMARY_COLOR = '#75b6b6'
-const PRIMARY_COLOR_OPACITY = '#75b6b64d'
-const SECUNDARY_COLOR = '#333333'
-const SECUNDARY_COLOR_2 = '#f5f5f5'
-const SECUNDARY_COLOR_3 = '#cccccc'
-
-const WHITE_OPACITY = '##ffffff80'
+const PRIMARY_COLOR = '#007ec7'
+const SECUNDARY_COLOR = '#726f84'
 
 module.exports = {
   content: [
@@ -16,11 +11,7 @@ module.exports = {
     extend: {
       colors: {
         primary: PRIMARY_COLOR,
-        primaryopacity: PRIMARY_COLOR_OPACITY,
-        secondary: SECUNDARY_COLOR,
-        'secondary-200': SECUNDARY_COLOR_2,
-        'secondary-400': SECUNDARY_COLOR_3,
-        'white-back': WHITE_OPACITY
+        secondary: SECUNDARY_COLOR
       }
     }
   },
