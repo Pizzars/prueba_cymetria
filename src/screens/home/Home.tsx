@@ -1,6 +1,5 @@
 import AboutHome from './components/AboutHome'
 import BannerHome from './components/BannerHome'
-import ServicesHome from './components/ServicesHome'
 import VideoHome from './components/VideoHome'
 
 const Home = () => {
@@ -8,7 +7,6 @@ const Home = () => {
     <div>
       <BannerHome />
       <AboutHome />
-      <ServicesHome />
       <VideoHome />
     </div>
   )
