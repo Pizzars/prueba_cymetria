@@ -11,8 +11,9 @@ const Home = () => {
   const [document, setDocument] = useState<string>('')
   const [result, setResult] = useState<Student | null>(null)
 
-  // 1018473282
+  // Documento que muestra datos: 1018473282
 
+  // Función para verificar las secuencias repetidas
   const hasRepeatedSequence = (str: string) => {
     // Dividir la cadena en todas las posibles longitudes de subsecuencia
     for (let i = 1; i <= str.length / 2; i++) {
@@ -25,6 +26,7 @@ const Home = () => {
     return false
   }
 
+  // Función para controlar el envio de los datos
   const handleSubmit = async (e: any) => {
     e.preventDefault()
 
