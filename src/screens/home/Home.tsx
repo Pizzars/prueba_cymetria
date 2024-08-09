@@ -62,7 +62,7 @@ const Home = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center min-h-screen py-8 px-8'>
       {result ? (
         <div className='text-secondary flex flex-col'>
           <DataCard
@@ -99,7 +99,10 @@ const Home = () => {
           />
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center'>
+        <form
+          onSubmit={handleSubmit}
+          className='flex flex-col justify-center items-center border border-primary w-full rounded-lg p-4 shadow-lg bg-white mb-4'
+        >
           <Input
             value={document}
             onChange={e => {

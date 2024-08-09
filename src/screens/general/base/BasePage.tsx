@@ -9,7 +9,7 @@ interface Params {
 
 const BasePage = ({ children }: Params) => {
   return (
-    <div className='w-full h-screen flex justify-center items-center'>
+    <div className='w-full flex justify-center items-center'>
       {/* <Header /> */}
       {children}
       {/* <Footer /> */}
