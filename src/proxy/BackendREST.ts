@@ -4,7 +4,7 @@ import axios from 'axios'
 import queryString from 'query-string'
 import { ResponseModel, ResponseType } from './responseData'
 
-const path = 'https://8hyg1w9q78.execute-api.us-east-1.amazonaws.com/dev'
+const path = 'https://api.talentotech.cymetria.com/api/v1/blockchain/obtener-estudiantes-aprobados'
 // const path = 'http://localhost:4000'
 
 const baseHeaders = {
@@ -26,7 +26,7 @@ export const getData = async (
   params: Record<string, unknown> = {},
   token = true,
   additionalHeaders: Record<string, string> = {}
-): Promise<any> => {
+): Promise<ResponseModel> => {
   const queryParams = Object.keys(params).length ? `?${queryString.stringify(params)}` : ''
   const headers = generateHeaders(token, additionalHeaders)
   const config = {

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
 import { ROUTES } from 'src/constants/routes'
-import logo from '../../../assets/general/logo_header-white.png'
+import logo from '../../../assets/general/logo.png'
 import LinkHeader from './LinkHeader'
 
 const Header = () => {

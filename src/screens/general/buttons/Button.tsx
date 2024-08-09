@@ -15,8 +15,8 @@ const Button = ({
 }: Params) => {
   return (
     <button
-      // onClick={disabled ? () => {} : onClick}
-      className={`bg-primary text-white hover:bg-secondary ${
+      onClick={disabled ? () => {} : onClick}
+      className={`bg-primary text-white ${
         disabled ? 'bg-opacity-50' : ''
       } font-bold text-lg py-2 px-4 rounded-lg ${className}`}
       type={type}
