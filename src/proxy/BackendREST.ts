@@ -5,15 +5,15 @@ import queryString from 'query-string'
 import { ResponseModel, ResponseType } from './responseData'
 import { getToken } from 'src/hooks/useAuth'
 
-const path = 'https://cymetria.betakore.com'
-// const path = 'http://localhost:4000'
+// Ruta base para las consultas al backend
+const path = 'http://localhost:4000'
 
+// Definición de headers base para llamar el backend
 const baseHeaders = {
-  // Accept: 'application/json',
   'Content-Type': 'application/json'
-  // 'Access-Control-Allow-Origin': '*'
 }
 
+// Función para generar los headers necesarios para cada consulta
 const generateHeaders = (token: boolean, additionalHeaders = {}) => {
   const auth = token
     ? {
@@ -29,6 +29,7 @@ const generateHeaders = (token: boolean, additionalHeaders = {}) => {
   return headers
 }
 
+// Función para llamar los datos por meotodo get
 export const getData = async (
   url: string,
   params: Record<string, unknown> = {},
@@ -61,6 +62,7 @@ export const getData = async (
   }
 }
 
+// Función para llamar los datos por meotodo post
 export const postData = async (
   url: string,
   data: any,
@@ -95,6 +97,7 @@ export const postData = async (
   }
 }
 
+// Función para llamar los datos por meotodo patch
 export const patchData = async (
   url: string,
   data: any,
@@ -129,6 +132,7 @@ export const patchData = async (
   }
 }
 
+// Función para llamar los datos por meotodo delete
 export const deleteData = async (
   url: string,
   params: Record<string, any> = {},
@@ -161,6 +165,7 @@ export const deleteData = async (
   }
 }
 
+// Función para integrar paramtros en la ruta
 const setParamsString = (params: any) => {
   let strParams = ''
   Object.keys(params).forEach((key, i) => {
