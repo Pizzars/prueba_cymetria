@@ -3,20 +3,28 @@
 import axios from 'axios'
 import queryString from 'query-string'
 import { ResponseModel, ResponseType } from './responseData'
+import { getToken } from 'src/hooks/useAuth'
 
-const path = 'https://api.talentotech.cymetria.com/api/v1/blockchain/obtener-estudiantes-aprobados'
-// const path = 'http://localhost:4000'
+// const path = 'https://cymetria.betakore.com'
+const path = 'http://localhost:4000'
 
 const baseHeaders = {
-  Accept: 'application/json',
-  'Content-Type': 'application/json',
-  'Access-Control-Allow-Origin': '*'
+  // Accept: 'application/json',
+  'Content-Type': 'application/json'
+  // 'Access-Control-Allow-Origin': '*'
 }
 
 const generateHeaders = (token: boolean, additionalHeaders = {}) => {
+  const auth = token
+    ? {
+        Authorization: `Bearer ${getToken()}`
+      }
+    : {}
+
   const headers = {
     ...baseHeaders,
-    ...additionalHeaders
+    ...additionalHeaders,
+    ...auth
   }
   return headers
 }
@@ -42,11 +50,11 @@ export const getData = async (
       status: ResponseType.OK,
       statusCode: 200
     })
-  } catch (error) {
+  } catch (error: any) {
     // alert("sigue fallando :(");
     console.log(error)
     return new ResponseModel({
-      data: error,
+      data: error.response.data,
       status: ResponseType.ERROR,
       statusCode: 400
     })
@@ -59,14 +67,15 @@ export const postData = async (
   params: Record<string, any> = {},
   token = true,
   additionalHeaders: Record<string, string> = {}
-): Promise<any> => {
+): Promise<ResponseModel> => {
   const headers = generateHeaders(token, additionalHeaders)
 
   const config = {
-    method: 'POST',
+    method: 'post',
+    maxBodyLength: Infinity,
     url: `${path}/${url}${setParamsString(params)}`,
     headers,
-    data
+    data: data
   }
 
   try {
@@ -76,10 +85,10 @@ export const postData = async (
       status: ResponseType.OK,
       statusCode: 200
     })
-  } catch (error) {
+  } catch (error: any) {
     console.log(error)
     return new ResponseModel({
-      data: error,
+      data: error.response.data,
       status: ResponseType.ERROR,
       statusCode: 400
     })

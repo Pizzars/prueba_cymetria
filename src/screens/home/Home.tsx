@@ -1,4 +1,3 @@
-'use client'
 import { useState } from 'react'
 import Button from '../general/buttons/Button'
 import Input from '../general/inputs/Input'
@@ -35,34 +34,18 @@ const Home = () => {
     }
 
     toast.loading('Buscando documento...')
-    const res = await getData('')
+    const res = await getData(`consulta/${document}`, {}, true)
     toast.dismiss()
     console.log(res)
     if (res.status === ResponseType.OK) {
-      if (res.data && res.data.estudiantes_aprobados) {
-        const list: Student[] = res.data.estudiantes_aprobados
-        if (list.length) {
-          for (let i = 0; i < list.length; i++) {
-            const student = list[i]
-            if (student.estudiante.num_documento === document) {
-              setResult(student)
-              setDocument('')
-              toast.success('Consulta exitosa')
-              return
-            }
-          }
-          toast.error('Documento no encontrado')
-        } else {
-          toast.error('No se encontraron resultados')
-        }
-        return
-      }
+      setResult(res.data)
+      toast.success('Consulta exitosa')
     }
-    toast.error('Error al realizar la consulta, intentelo más tarde')
+    toast.error(res.data.error)
   }
 
   return (
-    <div className='flex flex-col justify-center items-center min-h-screen py-8 px-8'>
+    <div className='flex flex-col justify-center items-center min-h-screen pt-24 pb-8 px-8 max-w-full'>
       {result ? (
         <div className='text-secondary flex flex-col'>
           <DataCard

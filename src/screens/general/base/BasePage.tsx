@@ -1,5 +1,5 @@
 import React from 'react'
-// import Header from '../header/Header'
+import Header from '../header/Header'
 // import Footer from '../footer/Footer'
 import Splash from '../splash/Splash'
 
@@ -9,8 +9,8 @@ interface Params {
 
 const BasePage = ({ children }: Params) => {
   return (
-    <div className='w-full flex justify-center items-center'>
-      {/* <Header /> */}
+    <div className='w-full flex justify-center max-w-screen'>
+      <Header />
       {children}
       {/* <Footer /> */}
       {/* <Splash /> */}

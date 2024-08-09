@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>Cymetria</title>
         <link rel='icon' href='/favicon.ico' />
         <link rel='apple-touch-icon' href='/logo192.png' />
-        <meta name='theme-color' content='#75b6b6' />
+        <meta name='theme-color' content='#007ec7' />
         <meta name='description' content='' />
       </head>
       <body
