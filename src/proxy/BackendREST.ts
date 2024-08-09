@@ -5,8 +5,8 @@ import queryString from 'query-string'
 import { ResponseModel, ResponseType } from './responseData'
 import { getToken } from 'src/hooks/useAuth'
 
-// const path = 'https://cymetria.betakore.com'
-const path = 'http://localhost:4000'
+const path = 'https://cymetria.betakore.com'
+// const path = 'http://localhost:4000'
 
 const baseHeaders = {
   // Accept: 'application/json',
